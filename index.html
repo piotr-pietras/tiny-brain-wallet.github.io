@@ -1,11 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello World</h1>
-</body>
+  <head>
+    <title>Tiny Brain Wallet</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A minimalistic HD wallet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./assets/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="header__top">
+          <div class="brand">
+            <img
+              class="brand__icon"
+              src="./assets/icon.png"
+              alt=""
+              width="96"
+              height="96"
+            />
+            <div class="brand__text">
+              <h1 class="brand__title">Tiny Brain Wallet</h1>
+              <p class="brand__tagline">Don’t trust. Verify.</p>
+            </div>
+          </div>
+
+          <div>
+            <a
+              class="icon-button"
+              href="https://github.com/piotr-pietras/tiny-brain-wallet"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download latest release"
+              title="Download latest release"
+            >
+              <img
+                src="./assets/github-svgrepo-com.svg"
+                class="icon-button__icon"
+                alt="GitHub repository"
+                width="42"
+                height="42"
+              />
+            </a>
+
+            <a
+              class="icon-button"
+              href="https://github.com/piotr-pietras/tiny-brain-wallet/releases/latest"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download latest release"
+              title="Download latest release"
+            >
+              <img
+                src="./assets/download-svgrepo-com.svg"
+                class="icon-button__icon"
+                alt="Download latest release"
+                width="42"
+                height="42"
+              />
+            </a>
+          </div>
+        </div>
+        <p class="lede">
+          An <strong>minimalistic</strong> and
+          <strong>easy-to-audit</strong> crypto HD wallet designed around
+          <strong>minimal dependencies</strong> and a simple, verifiable
+          architecture.
+        </p>
+      </header>
+
+      <main class="content">
+        <section class="section" aria-labelledby="goal">
+          <h2 id="goal">Goal</h2>
+          <p>
+            Keep the dependency tree small and the architecture simple so
+            security auditors and developers can quickly understand and verify
+            the wallet’s behavior.
+          </p>
+        </section>
+
+        <div id="carousel"></div>
+
+        <section class="section" aria-labelledby="deps">
+          <h2 id="deps">Minimal dependencies</h2>
+          <ul class="list">
+            <li>
+              <strong>bitcoinjs-lib</strong> — Bitcoin protocol implementation
+            </li>
+            <li>
+              <strong>tiny-secp256k1</strong> — minimal secp256k1 primitives
+            </li>
+            <li>
+              <strong>ecpair</strong> — elliptic curve key pair management
+            </li>
+            <li><strong>bip32</strong> — BIP32 key derivation</li>
+            <li>
+              <strong>bip39</strong> — mnemonic generation / seed derivation
+            </li>
+            <li><strong>electron</strong> — desktop application framework</li>
+            <li>
+              <strong>react</strong> + <strong>react-dom</strong> — UI rendering
+            </li>
+            <li><strong>react-router</strong> — routing</li>
+          </ul>
+          <p class="muted">
+            Everything else is implemented in-house to keep behavior
+            transparent.
+          </p>
+        </section>
+
+        <section class="section" aria-labelledby="bitcoin">
+          <h2>Currently supported cryptocurrencies</h2>
+          <h3 id="bitcoin">Bitcoin</h3>
+          <ul class="list">
+            <li><strong>API provider</strong>: mempool.space</li>
+            <li><strong>Address type</strong>: Native SegWit (P2WPKH)</li>
+            <li><strong>UTXO</strong>: discovery + selection</li>
+          </ul>
+          <p class="muted">⏳ More cryptocurrencies coming soon...</p>
+        </section>
+
+        <section class="section" aria-labelledby="license">
+          <p>
+            This project is <strong>open source</strong>. For more detailed
+            information, see the <a href="./README.md">README.md</a> in this
+            repository. For the source code, visit the
+            <a
+              class="link"
+              href="https://github.com/piotr-pietras/tiny-brain-wallet"
+              >GitHub repository</a
+            >.
+          </p>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="muted">
+          Source:
+          <a href="https://github.com/piotr-pietras/tiny-brain-wallet"
+            >GitHub</a
+          >
+        </p>
+        <p class="muted">License: ISC</p>
+      </footer>
+    </div>
+    <script src="./carousel.js" defer></script>
+  </body>
 </html>
